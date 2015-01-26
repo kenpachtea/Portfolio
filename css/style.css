@@ -113,13 +113,15 @@ a {
     color: #a1a1a1; }
 
 .topbar {
-  justify-content: center;
   flex-flow: row;
   font-family: "proxima-nova";
   height: 120px;
   background: transparent;
-  color: black;
-  padding-top: 50px; }
+  color: black; }
+
+.topbar__logo,
+.topbar__nav {
+  margin: auto 0 auto 0; }
 
 .topbar__logo {
   float: left;
