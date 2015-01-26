@@ -7,8 +7,6 @@ $g-gutter-width       : 20px;
 $g-col-count          : 12;
 $g-cont-max-w         : 1180px;
 
-$context: g-context($g-col-width, $g-col-count, $g-gutter-width);
-
 // Set the "context" width for the grid
 
 @function g-context($g-col-width, $g-col-count, $g-gutter-width){
@@ -28,7 +26,7 @@ $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
 
     @for $i from 1 through $g-col-count {
 
-        $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
+        $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
         $target : ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
 
         // Generate column modifier classes
