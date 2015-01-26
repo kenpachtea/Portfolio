@@ -1,30 +1,61 @@
-
+@import '_colors';
+@import '_typography';
+@import '_mixins';
 @import '_grid';
 @import '_helpers';
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
-
-
 body {
     font-size: 18px;
-    font-family: "brandon-grotesque",sans-serif;
+    font-family: $base-font;
+    color: $base-font--color;
 }
 
-.block {
-    background: grey;
-    width: 100%;
+a {
+    text-decoration: none;
+    
+    &:hover {
+        color: $base-link--hover;
+    }
 }
 
-.nav__topbar {
+.topbar {
+    font-family: "proxima-nova";
     height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background: grey;
-    @extend .centered;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    padding-top: 50px;
+}
+
+.topbar__logo {
+    float: left;;
+}
+
+.topbar__logo,
+.topbar__nav {
+    position: relative;
+    top: 40%;
+}
+
+.topbar__nav {
+    float:right;
+}
+
+.topbar__nav__item {
+    float:left;
+}
+
+.topbar__nav__item--active {
+    color: $base-link--color;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $almost-black;
+}
+
+.topbar__nav__item:last-child {
+    margin-left: 50px;
 }
 
 /** .panel,
@@ -34,22 +65,66 @@ body {
 }
 **/
 
-.panel {
+.hero {
     background: url('../img/bg-home.jpg') no-repeat;
     background-size: cover;
     background-position: bottom;
     height: 761px;
     
+    @media (max-width: 720px) {
+           /** height: 659px; **/ 
+        }
+    }
     
-}
 
-.panel__text--home {
-    font-size: 72px;
-    font-weight: 300;
-    line-height: 1.25;
+.hero__text--home {
+    font-family: $secondary-font;
+    font-size: $heading-hero--size-lg;
+    color: $heading-hero--color;
+    font-weight: $heading-hero--weight;
+    line-height: $heading-hero--line-h;
     text-align: left;
-    max-width: 860px;
+    max-width: 861px;
     margin: 0 auto;
     padding-top: 3em;
-    @extend .centered;
+
+    
+    @media (max-width: 877px) {
+        font-size: $heading-hero--size-md;
+    }
+    
+    @media (max-width: 567px) {
+        font-size: $heading-hero--size-sm;
+    }
+    
+    @media (max-width: 375px) {
+        padding-top: 2em;
+    }
 }
+
+.portfolio__items {
+    margin-top: 130px;
+}
+
+.portfolio__items__item {
+    max-width: 489px;
+    @extend .centered;
+    margin-bottom: 70px;
+}
+
+
+.portfolio__items__item,
+.portfolio__items__item__image {
+
+    @media (max-width: 1200px) and (min-width: 971px) {
+        width: 400px;
+    }
+    @media (max-width: 970px) and (min-width: 768px) {
+        width: 350px;
+    }
+    @media (max-width: 767px) and (min-width: 1px) {
+        width: 100%;
+   
+    }
+}
+

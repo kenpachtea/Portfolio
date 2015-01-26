@@ -64,7 +64,7 @@ $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
 // ===============================================================================
 
 
-.grid {
+.row {
     @extend %clearfix;
     @extend .centered;
     width: 90%;
