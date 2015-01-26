@@ -94,16 +94,17 @@ a {
     margin: 0 auto;
 
     
-    @media (max-width: 877px) {
+    @media (max-width: 980px) {
         font-size: $heading-hero--size-md;
+        max-width: 85%;
     }
     
     @media (max-width: 567px) {
         font-size: $heading-hero--size-sm;
     }
     
-    @media (max-width: 375px) {
-        padding-top: 2em;
+    @media (max-width: 320px) {
+        font-size: ($heading-hero--size-sm, 70%);
     }
 }
 
@@ -148,7 +149,7 @@ a {
     @extend .grid__col--6;
     @extend .centered;
     max-width: 489px;
-    margin-bottom: 70px;
+    margin-bottom: 78px;
 }
 
 
@@ -158,10 +159,10 @@ a {
     @media (max-width: 1200px) and (min-width: 971px) {
         width: 400px;
     }
-    @media (max-width: 970px) and (min-width: 768px) {
-        width: 350px;
+    @media (max-width: 970px) and (min-width: 769px) {
+        width: 310px;
     }
-    @media (max-width: 767px) and (min-width: 1px) {
+    @media (max-width: 769px) and (min-width: 1px) {
         width: 100%;
    
     }
