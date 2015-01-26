@@ -1,3 +1,24 @@
+.row:after, .topbar:after, .portfolio__row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.centered, .row, .topbar, .portfolio__row, .portfolio__items__item {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.center-text, .portfolio__heading {
+  text-align: center; }
+
+.flex-col, .topbar, .portfolio__items__item {
+  display: flex;
+  flex-direction: column; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row; }
+
 .base-text, .portfolio__items__item__subheading {
   font-family: "proxima-nova", sans-serif;
   font-size: 19px;
@@ -43,7 +64,7 @@
   .grid__col--5 {
     width: 40.67797%; }
 
-  .grid__col--6 {
+  .grid__col--6, .portfolio__items__item {
     width: 49.15254%; }
 
   .grid__col--7 {
@@ -78,30 +99,13 @@
       [class^='grid__col--']:last-of-type {
         float: right; } }
 
-.row {
+.row, .topbar, .portfolio__row {
   width: 90%; }
-  [class*="grid__col--"] > .row {
+  [class*="grid__col--"] > .row, [class*="grid__col--"] > .topbar, [class*="grid__col--"] > .portfolio__row {
     width: 100%; }
   @media (min-width: 1200px) {
-    .row {
+    .row, .topbar, .portfolio__row {
       width: 1180px; } }
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.centered, .row, .portfolio__items__item {
-  float: none;
-  margin-left: auto;
-  margin-right: auto; }
-
-.center-text, .portfolio__heading {
-  text-align: center; }
-
-.flex {
-  display: flex;
-  flex-direction: column; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -118,6 +122,8 @@ a {
     color: #a1a1a1; }
 
 .topbar {
+  justify-content: center;
+  flex-flow: row;
   font-family: "proxima-nova";
   height: 120px;
   background: transparent;
@@ -125,12 +131,8 @@ a {
   padding-top: 50px; }
 
 .topbar__logo {
-  float: left; }
-
-.topbar__logo,
-.topbar__nav {
-  position: relative;
-  top: 40%; }
+  float: left;
+  flex: 1; }
 
 .topbar__nav {
   float: right; }
@@ -169,8 +171,7 @@ a {
   line-height: 1.25;
   text-align: left;
   max-width: 861px;
-  margin: 0 auto;
-  padding-top: 3em; }
+  margin: 0 auto; }
   @media (max-width: 877px) {
     .hero__text--home {
       font-size: 62px; } }
@@ -181,6 +182,14 @@ a {
     .hero__text--home {
       padding-top: 2em; } }
 
+.portfolio__row {
+  display: flex;
+  flex-direction: row; }
+
+@media (min-width: 1px) and (max-width: 769px) {
+  .portfolio__row {
+    display: flex;
+    flex-direction: column; } }
 .portfolio__items {
   margin-top: 130px; }
 

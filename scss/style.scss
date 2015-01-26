@@ -1,8 +1,9 @@
+@import '_helpers';
 @import '_colors';
 @import '_typography';
 @import '_mixins';
 @import '_grid';
-@import '_helpers';
+
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -24,6 +25,10 @@ a {
 }
 
 .topbar {
+    @extend .row;
+    @extend .flex-col;
+    justify-content: center;
+    flex-flow: row;
     font-family: "proxima-nova";
     height: 120px;
     background: rgba(0, 0, 0, 0);
@@ -32,13 +37,8 @@ a {
 }
 
 .topbar__logo {
-    float: left;;
-}
-
-.topbar__logo,
-.topbar__nav {
-    position: relative;
-    top: 40%;
+    float: left;
+    flex: 1;
 }
 
 .topbar__nav {
@@ -87,7 +87,6 @@ a {
     text-align: left;
     max-width: 861px;
     margin: 0 auto;
-    padding-top: 3em;
 
     
     @media (max-width: 877px) {
@@ -103,13 +102,26 @@ a {
     }
 }
 
+.portfolio__row {
+    @extend .row;
+    @include flex(row);
+}
+
+@media (min-width: 1px) and (max-width: 769px) {
+    .portfolio__row {
+        @include flex(column);
+    }
+}
+
 .portfolio__items {
     margin-top: 130px;
 }
 
 .portfolio__items__item {
-    max-width: 489px;
+    @extend .flex-col;
+    @extend .grid__col--6;
     @extend .centered;
+    max-width: 489px;
     margin-bottom: 70px;
 }
 
