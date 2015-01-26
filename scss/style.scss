@@ -1,0 +1,55 @@
+
+@import '_grid';
+@import '_helpers';
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-size: 18px;
+    font-family: "brandon-grotesque",sans-serif;
+}
+
+.block {
+    background: grey;
+    width: 100%;
+}
+
+.nav__topbar {
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: grey;
+    @extend .centered;
+}
+
+/** .panel,
+.panel img {
+    width: 100%;
+    max-height: 761px;
+}
+**/
+
+.panel {
+    background: url('../img/bg-home.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 761px;
+    
+    
+}
+
+.panel__text--home {
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1.25;
+    text-align: left;
+    max-width: 860px;
+    margin: 0 auto;
+    padding-top: 3em;
+    @extend .centered;
+}
