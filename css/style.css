@@ -29,15 +29,6 @@
   font-size: 24px;
   color: #3b3b3b; }
 
-.portfolio__heading {
-  margin-top: 71px; }
-
-.portfolio__items__item__heading {
-  margin-top: 20px; }
-
-.portfolio__items__item__subheading {
-  margin-top: 10px; }
-
 /**
     font-size: 72px;
     font-weight: 400;
@@ -184,6 +175,18 @@ a {
   @media (max-width: 375px) {
     .hero__text--home {
       padding-top: 2em; } }
+
+.portfolio__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 70px; }
+
+.portfolio__items__item__heading {
+  margin-top: 20px; }
+
+.portfolio__items__item__subheading {
+  margin-top: 10px; }
 
 .portfolio__row {
   display: flex;

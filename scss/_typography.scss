@@ -40,20 +40,7 @@ $heading-small--color    :   $almost-black;
     color: $heading-small--color;
 }
 
-.portfolio__heading {
-    margin-top: 71px;
-    @extend .center-text;
-}
 
-.portfolio__items__item__heading {
-    @extend .heading-small;
-    margin-top: 20px;
-}
-
-.portfolio__items__item__subheading {
-    @extend .base-text;
-    margin-top: 10px;
-}
 
 
 

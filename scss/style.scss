@@ -104,6 +104,23 @@ a {
     }
 }
 
+.portfolio__heading {
+    @include flex(row);
+    justify-content: center;
+    margin-top: 70px;
+    @extend .center-text;
+}
+
+.portfolio__items__item__heading {
+    @extend .heading-small;
+    margin-top: 20px;
+}
+
+.portfolio__items__item__subheading {
+    @extend .base-text;
+    margin-top: 10px;
+}
+
 .portfolio__row {
     @extend .row;
     @include flex(row);
