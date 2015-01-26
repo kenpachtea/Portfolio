@@ -183,6 +183,9 @@ a {
 
 .portfolio__items {
   margin-top: 130px; }
+  @media (min-width: 1px) and (max-width: 769px) {
+    .portfolio__items {
+      margin-top: 65px; } }
 
 .portfolio__items__item {
   max-width: 489px;
