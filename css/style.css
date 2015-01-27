@@ -102,7 +102,7 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 18px;
+  font-size: 1.1875em;
   font-family: "proxima-nova", sans-serif;
   color: #7e7e7e; }
 
@@ -115,7 +115,7 @@ a {
 .topbar {
   flex-flow: row;
   font-family: "proxima-nova";
-  height: 120px;
+  height: 7.5em;
   background: transparent;
   color: black; }
 
@@ -135,7 +135,7 @@ a {
 
 .topbar__nav__item--active {
   color: #3b3b3b;
-  padding-bottom: 3px;
+  padding-bottom: 0.1875em;
   border-bottom: 1px solid #3b3b3b; }
 
 .topbar__nav__item:last-child {
@@ -148,8 +148,20 @@ a {
 }
 **/
 .hero {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   flex-direction: column;
+  -ms-flex-direction: column;
   justify-content: center;
   background: url("../img/bg-home.jpg") no-repeat;
   background-size: cover;
@@ -180,8 +192,20 @@ a {
       font-size: 52px, 70%; } }
 
 .portfolio__heading {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
   flex-direction: row;
+  -ms-flex-direction: row;
   justify-content: center;
   margin-top: 70px; }
 
@@ -192,13 +216,37 @@ a {
   margin-top: 10px; }
 
 .portfolio__row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row; }
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row; }
 
 @media (min-width: 1px) and (max-width: 769px) {
   .portfolio__row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column; } }
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; } }
 .portfolio__items {
   margin-top: 130px; }
   @media (min-width: 1px) and (max-width: 769px) {

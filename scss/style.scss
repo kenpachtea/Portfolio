@@ -1,3 +1,4 @@
+@import 'bourbon/_bourbon';
 @import '_helpers';
 @import '_colors';
 @import '_typography';
@@ -10,7 +11,7 @@
 }
 
 body {
-    font-size: 18px;
+    font-size: em(19px);
     font-family: $base-font;
     color: $base-font--color;
 }
@@ -29,7 +30,7 @@ a {
     @extend .flex-col;
     flex-flow: row;
     font-family: "proxima-nova";
-    height: 120px;
+    height: em(120px);
     background: rgba(0, 0, 0, 0);
     color: black;
 }
@@ -54,7 +55,7 @@ a {
 
 .topbar__nav__item--active {
     color: $base-link--color;
-    padding-bottom: 3px;
+    padding-bottom: em(3px);
     border-bottom: 1px solid $almost-black;
 }
 
