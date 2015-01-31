@@ -32,12 +32,18 @@ $heading-hero--color     :   $white;
 $heading-hero--line-h    :   1.25;
 
 $heading-small--size     :   24px;
+$heading-medium--size    :   30px;
 $heading-small--color    :   $almost-black;
 
 .heading-small {
     font-family: $secondary-font;
     font-size: $heading-small--size;
     color: $heading-small--color;
+}
+
+.heading-medium {
+    @extend .heading-small;
+    font-size: $heading-medium--size; 
 }
 
 
