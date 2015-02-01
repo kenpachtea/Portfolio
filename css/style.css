@@ -24,12 +24,14 @@
   font-size: 19px;
   color: #7e7e7e; }
 
-.heading-small, .heading-medium, .portfolio__items__item__heading {
+.heading, .heading-small, .portfolio__items__item__heading, .heading-medium, .project__panel__heading {
   font-family: "brandon-grotesque", sans-serif;
-  font-size: 24px;
   color: #3b3b3b; }
 
-.heading-medium {
+.heading-small, .portfolio__items__item__heading {
+  font-size: 24px; }
+
+.heading-medium, .project__panel__heading {
   font-size: 30px; }
 
 /**
@@ -291,5 +293,8 @@ a {
   justify-content: center;
   height: 700px;
   background: grey; }
+
+.project__panel__heading {
+  margin-top: 70px; }
 
 /*# sourceMappingURL=style.css.map */

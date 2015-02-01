@@ -31,18 +31,23 @@ $heading-hero--weight    :   400;
 $heading-hero--color     :   $white;
 $heading-hero--line-h    :   1.25;
 
+$heading--color          :   $almost-black;
 $heading-small--size     :   24px;
 $heading-medium--size    :   30px;
-$heading-small--color    :   $almost-black;
+
+.heading {
+    font-family: $secondary-font;
+    color: $heading--color;    
+}
 
 .heading-small {
-    font-family: $secondary-font;
+    @extend .heading;
     font-size: $heading-small--size;
-    color: $heading-small--color;
+
 }
 
 .heading-medium {
-    @extend .heading-small;
+    @extend .heading;
     font-size: $heading-medium--size; 
 }
 

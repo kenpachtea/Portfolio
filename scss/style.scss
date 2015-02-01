@@ -169,10 +169,17 @@ a {
     }
 }
 
-
 .project__panel {
     @include flex(row);
     justify-content: center;
     height: 700px;
     background: grey;
 }
+
+.project__panel__heading {
+   @extend .heading-medium;
+    margin-top: 70px;
+}
+
+
+
