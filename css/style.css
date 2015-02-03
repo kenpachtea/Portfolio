@@ -126,14 +126,10 @@ a {
 
 .topbar__logo,
 .topbar__nav {
-  margin: auto 0 auto 0; }
+  align-self: center; }
 
 .topbar__logo {
-  float: left;
-  flex: 1; }
-
-.topbar__nav {
-  float: right; }
+  margin-right: auto; }
 
 .topbar__nav__item {
   float: left; }
@@ -167,7 +163,7 @@ a {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
-  justify-content: center;
+  align-self: center;
   background: url("../img/bg-home.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -184,7 +180,8 @@ a {
   line-height: 1.25;
   text-align: left;
   max-width: 861px;
-  margin: 0 auto; }
+  margin: auto;
+  align-self: center; }
   @media (max-width: 980px) {
     .hero__text--home {
       font-size: 62px;
