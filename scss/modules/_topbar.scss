@@ -1,0 +1,32 @@
+.topbar {
+    @extend .row;
+    @extend .flex-col;
+    flex-flow: row;
+    font-family: "proxima-nova";
+    height: em(120px);
+    background: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+.topbar__logo,
+.topbar__nav {
+   align-self: center;
+}
+
+.topbar__logo {
+    margin-right: auto;
+}
+
+.topbar__nav__item {
+    float: left;
+}
+
+.topbar__nav__item--active {
+    color: $base-link--color;
+    padding-bottom: em(3px);
+    border-bottom: 1px solid $almost-black;
+}
+
+.topbar__nav__item:last-child {
+    margin-left: 50px;
+}

@@ -47,7 +47,7 @@ $g-cont-max-w         : 1180px;
     **/
     
     @media (min-width: 769px) {
-        @include doubly(percentage($g-gutter-width / $context));
+        @include doubly(em($g-gutter-width));
         float: left;
         min-height: 1px;
         &:last-of-type {
