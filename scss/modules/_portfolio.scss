@@ -1,28 +1,27 @@
 .portfolio__heading {
-    @include flex(row);
-    justify-content: center;
     margin-top: 70px;
     @extend .center-text;
 }
 
 .portfolio__items__item__heading {
     @extend .heading-small;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .portfolio__items__item__subheading {
-    @extend .base-text;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .portfolio__row {
+    @include flex-wrap(wrap);
     @extend .row;
-    @include flex(row);
+    @extend %flex-row;
 }
 
 @media (min-width: 1px) and (max-width: 769px) {
     .portfolio__row {
-        @include flex(column);
+        @include display(flex);
+        @include flex-direction(column);
     }
 }
 
@@ -35,17 +34,15 @@
 }
 
 .portfolio__items__item {
-    @extend .flex-col;
-    @extend .grid__col--6;
+
     @extend .centered;
-    max-width: 489px;
     margin-bottom: 78px;
 }
 
 
 .portfolio__items__item,
 .portfolio__items__item__image {
-
+    max-width: 489px;
     @media (max-width: 1200px) and (min-width: 971px) {
         width: 400px;
     }

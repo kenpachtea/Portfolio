@@ -1,13 +1,12 @@
 .hero {
-    @include flex(column);
-    align-self: center;
     background: url('../img/bg-home.jpg') no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: 641px;
+    height: 100%;
+    padding: 8em 0;
     
-    @media (max-width: 720px) {
-           /** height: 659px; **/ 
+    @media (max-width: 480px) {
+           padding: 3em 0; 
         }
     }
     
@@ -21,7 +20,6 @@
     text-align: left;
     max-width: 861px;
     margin: auto;
-    align-self: center;
 
     
     @media (max-width: 980px) {

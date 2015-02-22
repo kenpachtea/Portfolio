@@ -9,6 +9,7 @@ $base-font--size         :   19px;
 $base-font--color        :   #7e7e7e;
 $base-link--color        :   $almost-black;
 $base-link--hover        :   lighten($base-link--color, 40%);
+$base-line-height        :   30px;
 
 .base-text {
     font-family: $base-font;
@@ -24,7 +25,7 @@ $secondary-font          :   'brandon-grotesque', sans-serif;
 
 $heading-hero--size-lg   :   72px;
 $heading-hero--size-md   :   62px;
-$heading-hero--size-sm   :   52px;
+$heading-hero--size-sm   :   36px;
 
 $heading-hero--weight    :   400;
 

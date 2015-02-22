@@ -1,11 +1,14 @@
 .topbar {
     @extend .row;
-    @extend .flex-col;
-    flex-flow: row;
+    @extend %flex-row;
     font-family: "proxima-nova";
     height: em(120px);
     background: rgba(0, 0, 0, 0);
     color: black;
+  
+    @media (max-width: 480px) {
+       height: em(80px); 
+    }
 }
 
 .topbar__logo,

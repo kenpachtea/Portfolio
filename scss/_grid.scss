@@ -30,7 +30,7 @@ $g-cont-max-w         : 1180px;
         $target : ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
 
         // Generate column modifier classes
-        .grid__col--#{$i} {
+        %grid__col--#{$i} {
          width: percentage($target / $context);
         
         }
