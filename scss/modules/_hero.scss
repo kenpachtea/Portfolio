@@ -1,23 +1,23 @@
-.hero {
-    background: url('../img/bg-home.jpg') no-repeat;
+//Placeholders
+
+%hero {
+    background: url('/hasan/img/bg-home.jpg') no-repeat;
     background-size: cover;
     background-position: bottom;
     height: 100%;
-    padding: 8em 0;
     
     @media (max-width: 480px) {
            padding: 3em 0; 
         }
     }
-    
 
-.hero__text--home {
+
+%hero__text {
     font-family: $secondary-font;
     font-size: $heading-hero--size-lg;
     color: $heading-hero--color;
     font-weight: $heading-hero--weight;
     line-height: $heading-hero--line-h;
-    text-align: left;
     max-width: 861px;
     margin: auto;
 
@@ -34,4 +34,66 @@
     @media (max-width: 320px) {
         font-size: ($heading-hero--size-sm, 70%);
     }
+}
+
+%hero__subhead {
+  font-family: $base-font;
+  font-size:$base-font--size;
+  color: $subhead--color;
+}
+
+
+
+
+//Styles
+
+.hero {
+    @extend %hero;
+    padding: 8em 0;
+}
+
+
+.hero--rss-reader {
+    background: url('/hasan/img/project/rss-reader/bg-hero.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 8em 0 0;
+    
+}
+
+.hero__text--home {
+    @extend %hero__text;
+    text-align: left;
+
+    
+    @media (max-width: 980px) {
+        font-size: $heading-hero--size-md;
+        max-width: 85%;
+    }
+    
+    @media (max-width: 567px) {
+        font-size: $heading-hero--size-sm;
+    }
+    
+    @media (max-width: 320px) {
+        font-size: ($heading-hero--size-sm, 70%);
+    }
+}
+
+.hero__text--centered {
+    @extend %hero__text;
+    @extend .center-text;
+}
+
+.hero__subhead--centered {
+    @extend %hero__subhead;
+    @extend .center-text;
+    
+}
+
+.hero__img {
+    @extend .centered;
+    display: block;
+    padding-top: 3em;
+    max-width: 90%;
 }

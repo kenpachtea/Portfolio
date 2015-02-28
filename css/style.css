@@ -1,354 +1,77 @@
-.row:after, .topbar:after, .portfolio__row:after, .panel--centered__heading:after, .panel--centered__description:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/*
+Error: Undefined variable: "$base-background-color".
+        on line 3 of c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bitters-0.10.1/app/assets/stylesheets/_typography.scss
+        from line 7 of style.scss
 
-.centered, .row, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description, .portfolio__items__item, .panel--centered__image {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-}
+1: 
+2: //Utilities 
+3: 
+4: @import 'bourbon/_bourbon';
+5: @import '_helpers';
+6: @import '_colors';
+7: @import '_typography';
+8: @import '_mixins';
 
-.center-text, .portfolio__heading, .panel--centered__heading, .panel--centered__description {
-  text-align: center;
-}
-
-.topbar, .portfolio__row, .panel .row, .panel .topbar, .panel .portfolio__row, .panel .panel--centered__heading, .panel .panel--centered__description {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-}
-
-.base-text {
-  font-family: "proxima-nova", sans-serif;
-  font-size: 19px;
-  color: #7e7e7e;
-}
-
-.heading, .heading-small, .portfolio__items__item__heading, .heading-medium, .panel--centered__heading, .panel--right__heading {
-  font-family: "brandon-grotesque", sans-serif;
-  color: #3b3b3b;
-}
-
-.heading-small, .portfolio__items__item__heading {
-  font-size: 24px;
-}
-
-.heading-medium, .panel--centered__heading, .panel--right__heading {
-  font-size: 30px;
-}
-
-[class^='grid__col--'] {
-  /** @media (min-width: 1px) and (max-width: 768px) {
-       margin-top: 0.8em;
-       margin-bottom: 0.8em;
-   }
-   **/
-}
-@media (min-width: 769px) {
-  [class^='grid__col--'] {
-    float: left;
-    min-height: 1px;
-  }
-  [class^='grid__col--'] + [class^='grid__col--'] {
-    margin-left: 1.25em;
-  }
-  [class^='grid__col--']:last-of-type {
-    float: right;
-  }
-}
-
-.row, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description {
-  width: 90%;
-}
-[class*="grid__col--"] > .row, [class*="grid__col--"] > .topbar, [class*="grid__col--"] > .portfolio__row, [class*="grid__col--"] > .panel--centered__heading, [class*="grid__col--"] > .panel--centered__description {
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .row, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description {
-    width: 1180px;
-  }
-}
-
-.topbar {
-  font-family: "proxima-nova";
-  height: 7.5em;
-  background: transparent;
-  color: black;
-}
-@media (max-width: 480px) {
-  .topbar {
-    height: 5em;
-  }
-}
-
-.topbar__logo,
-.topbar__nav {
-  align-self: center;
-}
-
-.topbar__logo {
-  margin-right: auto;
-}
-
-.topbar__nav__item {
-  float: left;
-}
-
-.topbar__nav__item--active {
-  color: #3b3b3b;
-  padding-bottom: 0.1875em;
-  border-bottom: 1px solid #3b3b3b;
-}
-
-.topbar__nav__item:last-child {
-  margin-left: 50px;
-}
-
-.hero {
-  background: url("../img/bg-home.jpg") no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  height: 100%;
-  padding: 8em 0;
-}
-@media (max-width: 480px) {
-  .hero {
-    padding: 3em 0;
-  }
-}
-
-.hero__text--home {
-  font-family: "brandon-grotesque", sans-serif;
-  font-size: 72px;
-  color: #ffffff;
-  font-weight: 400;
-  line-height: 1.25;
-  text-align: left;
-  max-width: 861px;
-  margin: auto;
-}
-@media (max-width: 980px) {
-  .hero__text--home {
-    font-size: 62px;
-    max-width: 85%;
-  }
-}
-@media (max-width: 567px) {
-  .hero__text--home {
-    font-size: 36px;
-  }
-}
-@media (max-width: 320px) {
-  .hero__text--home {
-    font-size: 36px, 70%;
-  }
-}
-
-.portfolio__heading {
-  margin-top: 70px;
-}
-
-.portfolio__items__item__heading {
-  margin-top: 15px;
-}
-
-.portfolio__items__item__subheading {
-  margin-top: 5px;
-}
-
-.portfolio__row {
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 1px) and (max-width: 769px) {
-  .portfolio__row {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column;
-  }
-}
-.portfolio__items {
-  margin-top: 130px;
-}
-@media (min-width: 1px) and (max-width: 769px) {
-  .portfolio__items {
-    margin-top: 65px;
-  }
-}
-
-.portfolio__items__item {
-  margin-bottom: 78px;
-}
-
-.portfolio__items__item,
-.portfolio__items__item__image {
-  max-width: 489px;
-}
-@media (max-width: 1200px) and (min-width: 971px) {
-  .portfolio__items__item,
-  .portfolio__items__item__image {
-    width: 400px;
-  }
-}
-@media (max-width: 970px) and (min-width: 769px) {
-  .portfolio__items__item,
-  .portfolio__items__item__image {
-    width: 310px;
-  }
-}
-@media (max-width: 769px) and (min-width: 1px) {
-  .portfolio__items__item,
-  .portfolio__items__item__image {
-    width: 100%;
-  }
-}
-
-.panel-light,
-.panel-dark {
-  padding: 120px 0;
-  height: 100%;
-}
-@media (max-width: 769px) {
-  .panel-light,
-  .panel-dark {
-    padding: 80px 0;
-  }
-}
-
-.panel-light {
-  background: #ffffff;
-}
-
-.panel-dark {
-  background: #f7f7f7;
-}
-
-.panel--centered__heading {
-  line-height: 1.25;
-}
-
-.panel--centered__description {
-  margin-top: 40px;
-}
-
-.panel--centered__heading,
-.panel--centered__description {
-  max-width: 567px;
-}
-@media (max-width: 640px) {
-  .panel--centered__heading,
-  .panel--centered__description {
-    text-align: left;
-  }
-}
-
-.panel--centered__image {
-  max-width: 90%;
-  display: block;
-  margin-top: 100px;
-}
-@media (max-width: 640px) {
-  .panel--centered__image {
-    margin-top: 70px;
-  }
-}
-
-.panel .row, .panel .topbar, .panel .portfolio__row, .panel .panel--centered__heading, .panel .panel--centered__description {
-  flex-wrap: wrap-reverse;
-}
-
-.panel-textgroup {
-  justify: flex-end;
-  padding: 0 0 0 50px;
-}
-@media (max-width: 1011px) {
-  .panel-textgroup {
-    padding: 0;
-  }
-}
-
-.panel-textgroup,
-.panel--right__image {
-  margin: 0 auto;
-}
-
-.panel--right__heading {
-  text-align: left;
-  line-height: 1.25;
-}
-
-.panel--right__description {
-  text-align: left;
-  margin-top: 40px;
-}
-
-.panel--right__heading,
-.panel--right__description {
-  max-width: 567px;
-}
-@media (max-width: 955px) {
-  .panel--right__heading,
-  .panel--right__description {
-    text-align: center;
-  }
-}
-
-.panel--right__image {
-  max-width: 90%;
-}
-@media (max-width: 955px) {
-  .panel--right__image {
-    margin-top: 80px;
-  }
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body {
-  font-size: 1.1875em;
-  font-family: "proxima-nova", sans-serif;
-  color: #7e7e7e;
-  line-height: 30px;
-}
-
-a {
-  text-decoration: none;
-  color: #3b3b3b;
-}
-a:hover {
-  color: #a1a1a1;
-}
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bitters-0.10.1/app/assets/stylesheets/_typography.scss:3
+style.scss:7
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `map'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:88:in `block in with_import'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:88:in `with_import'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+c:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `load'
+c:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$base-background-color\".\A         on line 3 of c:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/bitters-0.10.1/app/assets/stylesheets/_typography.scss\A         from line 7 of style.scss\A \A 1: \A 2: //Utilities \A 3: \A 4: @import 'bourbon/_bourbon';\A 5: @import '_helpers';\A 6: @import '_colors';\A 7: @import '_typography';\A 8: @import '_mixins';"; }
