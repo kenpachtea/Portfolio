@@ -1,0 +1,118 @@
+//Panel Base
+
+%panel {
+    padding: 120px 0;
+    height: 100%;
+
+    @media (max-width: 769px) {
+      padding: 80px 0;
+    }
+}
+
+.panel-light,
+.panel-dark {
+  @extend %panel;
+}
+
+.panel-light {
+  background: $white;
+}
+
+.panel-dark {
+  background: $light-grey;
+}
+
+
+
+//Panel Centered
+
+.panel--centered__heading {
+   
+   @extend .row;
+   @extend .heading-medium;
+   @extend .center-text;
+   line-height: $heading-hero--line-h;
+   @include justify-content(center);
+}
+
+.panel--centered__description {
+  @extend .row;
+  @extend .centered;
+  @extend .center-text;
+  margin-top: 40px;
+}
+
+.panel--centered__heading,
+.panel--centered__description {
+    max-width: 567px;
+    /**@media (max-width: 640px) {
+      text-align: left;
+  }**/
+}
+
+.panel--centered__image {
+  max-width: 90%;
+  display: block;
+  @extend .centered;
+  margin-top: 100px;
+  
+  @media (max-width: 640px) {
+      margin-top: 70px;
+  }
+  
+}
+
+//Panel Right Alligned
+
+.panel {
+  .row {
+    @extend %flex-row;
+    flex-wrap: wrap-reverse;
+
+  }
+}
+
+.panel-textgroup {
+  justify: flex-end;
+  padding: 0 0 0 50px;
+    
+    @media (max-width: 1011px) {
+    padding: 0;
+  }
+}
+
+.panel-textgroup,
+.panel--right__image {
+  margin: 0 auto;
+}
+
+.panel--right__heading {
+   @extend .heading-medium;
+   text-align: left;
+   line-height: $heading-hero--line-h;
+}
+
+.panel--right__description {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.panel--right__heading,
+.panel--right__description {
+    max-width: 567px;
+    @media (max-width: 955px) {
+      text-align: center;
+  }
+}
+
+.panel--right__image {
+  max-width: 90%;
+  @media (max-width: 955px) {
+    margin-top: 80px;
+  }
+  
+}
+
+
+
+
