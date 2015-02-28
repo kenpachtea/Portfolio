@@ -32,6 +32,7 @@
    @extend .heading-medium;
    @extend .center-text;
    line-height: $heading-hero--line-h;
+   @include justify-content(center);
 }
 
 .panel--centered__description {
@@ -44,9 +45,9 @@
 .panel--centered__heading,
 .panel--centered__description {
     max-width: 567px;
-    @media (max-width: 640px) {
+    /**@media (max-width: 640px) {
       text-align: left;
-  }
+  }**/
 }
 
 .panel--centered__image {
