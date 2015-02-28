@@ -33,3 +33,7 @@
     @include display(flex);
     @include flex-direction(row);
 }
+
+.align-center {
+    @include align-self(center);
+}
