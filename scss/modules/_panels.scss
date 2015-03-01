@@ -67,7 +67,7 @@
 .panel {
   .row {
     @extend %flex-row;
-    flex-wrap: wrap-reverse;
+    @include flex-wrap(wrap-reverse);
 
   }
 }
@@ -80,7 +80,7 @@
   }
   
     &--left {
-    order: -1;
+    @include order(-1);
   }
 }
 

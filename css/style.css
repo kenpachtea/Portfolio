@@ -90,6 +90,15 @@
 }
 
 .topbar {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
   font-family: "proxima-nova";
   height: 7.5em;
   background: transparent;
@@ -99,11 +108,6 @@
   .topbar {
     height: 5em;
   }
-}
-
-.topbar__logo,
-.topbar__nav {
-  align-self: center;
 }
 
 .topbar__logo {
@@ -338,6 +342,12 @@
 }
 
 .panel .row, .panel .topbar, .panel .portfolio__row, .panel .panel--centered__heading, .panel .panel--centered__description {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap-reverse;
+  -moz-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse;
 }
 
@@ -350,7 +360,13 @@
   }
 }
 .panel-textgroup--left {
+  -webkit-box-ordinal-group: -1;
+  -moz-box-ordinal-group: -1;
+  box-ordinal-group: -1;
+  -webkit-order: -1;
+  -moz-order: -1;
   order: -1;
+  -ms-flex-order: -1;
 }
 
 [class^="panel-textgroup"],

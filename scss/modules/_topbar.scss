@@ -1,6 +1,7 @@
 .topbar {
     @extend .row;
     @extend %flex-row;
+    @include align-items(center);
     font-family: "proxima-nova";
     height: em(120px);
     background: rgba(0, 0, 0, 0);
@@ -11,10 +12,6 @@
     }
 }
 
-.topbar__logo,
-.topbar__nav {
-   align-self: center;
-}
 
 .topbar__logo {
     margin-right: auto;
