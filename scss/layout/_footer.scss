@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  background-color: $almost-black;
+  padding: em(80px);
+}
+
+.footer .row {
+  @extend %flex-row;
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+}
+
+/** .footer__col {
+  
+} **/
+
+.footer__col__heading {
+  font-family: $secondary-font;
+  font-size: $heading-small--size;
+  color: $dark-grey;
+  margin-bottom: 20px;
+  
+}
+
+.footer__col__link {
+  margin-top: 5px;
+  display: block;
+  color: $blue;
+  text-decoration: underline;
+}
