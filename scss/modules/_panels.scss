@@ -62,15 +62,7 @@
   
 }
 
-//Panel Right Alligned
-
-.panel {
-  .row {
-    @extend %flex-row;
-    @include flex-wrap(wrap-reverse);
-
-  }
-}
+//Panel Right Aligned
 
 .panel-textgroup {
   padding: 0 0 0 50px;
@@ -112,9 +104,16 @@
   max-width: 90%;
   @media (max-width: 955px) {
     margin-top: 80px;
-  }
-  
+  } 
 }
+
+//Panel with big image only
+
+.panel--imageonly {
+  margin: 5em auto;
+  max-width: 90%;
+}
+
 
 
 

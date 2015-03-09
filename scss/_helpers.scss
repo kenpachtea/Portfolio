@@ -24,6 +24,8 @@
     text-align: center;
 }
 
+//Flex
+
 %flex-col {
     @include display(flex);
     @include flex-direction(column);
@@ -32,6 +34,20 @@
 %flex-row {
     @include display(flex);
     @include flex-direction(row);
+}
+
+.row-wrap,
+.row-wrap--reverse {
+  @extend .row;
+  @extend %flex-row;;
+}
+
+.row-wrap {
+  @include flex-wrap(wrap)
+}
+
+.row-wrap--reverse {
+  @include flex-wrap(wrap-reverse)
 }
 
 .align-center {

@@ -1,7 +1,7 @@
 //Placeholders
 
 %hero {
-    background: url('/img/bg-home.jpg') no-repeat;
+    background: url('../img/bg-home.jpg') no-repeat;
     background-size: cover;
     background-position: bottom;
     height: 100%;
@@ -52,9 +52,8 @@
     padding: 8em 0;
 }
 
-
 .hero--rss-reader {
-    background: url('/img/project/rss-reader/bg-hero.jpg') no-repeat;
+    background: url('../img/project/rss-reader/bg-hero.jpg') no-repeat;
     background-size: cover;
     background-position: bottom;
     padding: 8em 0 0;

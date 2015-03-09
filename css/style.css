@@ -1,10 +1,12 @@
-.row:after, .topbar:after, .portfolio__row:after, .panel--centered__heading:after, .panel--centered__description:after {
+.row:after, .row-wrap:after,
+.row-wrap--reverse:after, .topbar:after, .portfolio__row:after, .panel--centered__heading:after, .panel--centered__description:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.centered, .row, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description, .hero__img, .portfolio__items__item, .panel--centered__image {
+.centered, .row, .row-wrap,
+.row-wrap--reverse, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description, .hero__img, .portfolio__items__item, .panel--centered__image {
   float: none;
   margin-left: auto;
   margin-right: auto;
@@ -14,7 +16,9 @@
   text-align: center;
 }
 
-.footer .row, .footer .topbar, .footer .portfolio__row, .footer .panel--centered__heading, .footer .panel--centered__description, .topbar, .portfolio__row, .panel .row, .panel .topbar, .panel .portfolio__row, .panel .panel--centered__heading, .panel .panel--centered__description {
+.row-wrap,
+.row-wrap--reverse, .footer .row, .footer .row-wrap,
+.footer .row-wrap--reverse, .footer .topbar, .footer .portfolio__row, .footer .panel--centered__heading, .footer .panel--centered__description, .topbar, .portfolio__row {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -29,6 +33,26 @@
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+}
+
+.row-wrap {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.row-wrap--reverse {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap-reverse;
+  -moz-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 .align-center {
@@ -77,25 +101,29 @@
   }
 }
 
-.row, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description {
+.row, .row-wrap,
+.row-wrap--reverse, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description {
   width: 90%;
 }
-[class*="grid__col--"] > .row, [class*="grid__col--"] > .topbar, [class*="grid__col--"] > .portfolio__row, [class*="grid__col--"] > .panel--centered__heading, [class*="grid__col--"] > .panel--centered__description {
+[class*="grid__col--"] > .row, [class*="grid__col--"] > .row-wrap,
+[class*="grid__col--"] > .row-wrap--reverse, [class*="grid__col--"] > .topbar, [class*="grid__col--"] > .portfolio__row, [class*="grid__col--"] > .panel--centered__heading, [class*="grid__col--"] > .panel--centered__description {
   width: 100%;
 }
 @media (min-width: 1200px) {
-  .row, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description {
+  .row, .row-wrap,
+  .row-wrap--reverse, .topbar, .portfolio__row, .panel--centered__heading, .panel--centered__description {
     width: 1180px;
   }
 }
 
 .footer {
   width: 100%;
-  background-color: #3b3b3b;
+  background-color: #e5e5e5;
   padding: 5em;
 }
 
-.footer .row, .footer .topbar, .footer .portfolio__row, .footer .panel--centered__heading, .footer .panel--centered__description {
+.footer .row, .footer .row-wrap,
+.footer .row-wrap--reverse, .footer .topbar, .footer .portfolio__row, .footer .panel--centered__heading, .footer .panel--centered__description {
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -171,7 +199,7 @@
 }
 
 .hero {
-  background: url("/img/bg-home.jpg") no-repeat;
+  background: url("../img/bg-home.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
   height: 100%;
@@ -219,7 +247,7 @@
 }
 
 .hero--rss-reader {
-  background: url("/img/project/rss-reader/bg-hero.jpg") no-repeat;
+  background: url("../img/project/rss-reader/bg-hero.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
   padding: 8em 0 0;
@@ -383,16 +411,6 @@
   }
 }
 
-.panel .row, .panel .topbar, .panel .portfolio__row, .panel .panel--centered__heading, .panel .panel--centered__description {
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap-reverse;
-  -moz-flex-wrap: wrap-reverse;
-  -ms-flex-wrap: wrap-reverse;
-  flex-wrap: wrap-reverse;
-}
-
 .panel-textgroup {
   padding: 0 0 0 50px;
 }
@@ -444,6 +462,11 @@
   .panel--align__image {
     margin-top: 80px;
   }
+}
+
+.panel--imageonly {
+  margin: 5em auto;
+  max-width: 90%;
 }
 
 *, *:before, *:after {
