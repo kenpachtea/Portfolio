@@ -60,6 +60,14 @@
     
 }
 
+.hero--inspire-estate {
+    background: url('../img/project/inspire-estate/bg-hero.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 8em 0 0;
+    
+}
+
 .hero__text--home {
     @extend %hero__text;
     text-align: left;
